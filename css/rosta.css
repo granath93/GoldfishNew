@@ -1,0 +1,25 @@
+
+
+#rosta{
+	background-color:#f24537;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Verdana;
+	font-size:18px;
+	height:30px;
+	line-height:20px;
+	width:150px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 1px #810e05;
+	border:none;
+
+
+
+}
+#rosta:hover {
+	background-color:#c62d1f;
+}
+#rosta:active {
+	position:relative;
+}
