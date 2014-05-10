@@ -1,0 +1,353 @@
+/*
+Detta är ett css för användargränssnittet till webbsidan
+Skiver allt i bokstavsordning
+Börjar med de selectorerna, sedan id och sist classes
+*/
+
+
+/*
+------------------------------------------- Här börjar standardselektorerna ----------------------------------------
+*/
+a{
+	text-decoration: none;
+	color: white;
+	font-family: "Helvetica", "Gill Sans Mt";
+}
+
+body { 
+	position:absolute;
+	margin-top: -10px;
+	margin-left: -10px;
+	width: 100%;
+	height: 100%;
+	
+}
+
+p{
+	color:#000000;
+	font-family: "Helvetica", "Gill Sans Mt";
+} 
+
+h1{
+	display: block;
+}
+
+
+/* ######### CSS for horizontal menu demo  ######### */
+
+ul.backgroundNav{
+background-color: black;
+color: white;
+margin-left: 50%;
+	margin-top: 70px;
+	z-index: 10;
+
+}
+
+ul.backgroundNav li{
+display: inline;
+
+}
+
+ul.backgroundNav li a{
+	margin:3.9px;
+	padding:5px 5px 12px 9px;
+	z-index: 10;
+	background-color: black;
+	color: white;
+
+}
+
+ul.backgroundNav li a:hover, ul.backgroundNav li a.selected{
+	background-color: white;
+	color: black;
+	border-top-left-radius:10px;
+	border-top-right-radius:10px;
+	z-index: 10;
+
+}
+
+/* ######### CSS for vertical menu demo  ######### */
+
+/*
+------------------------------------------- Här börjar classes ----------------------------------------
+*/
+.arrow-right {
+	width: 0; 
+	height:0; 
+	border-top: 15px solid transparent;
+	border-bottom: 15px solid transparent;
+	border-left: 15px solid #ffb182;
+	display:inline-block;
+	margin-left:-4px;
+	margin-bottom: -9px;
+}
+
+
+.arrow-up{
+	width: 0; 
+	height: 0; 
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	
+	border-bottom: 5px solid red;
+	margin-left:10px;
+	margin-top: 100px;
+}
+
+
+.content{
+	margin: 60px 60px 100px 60px;
+	float:left;
+	width:840px;
+}
+
+.contenttext{
+	text-align: center;
+}
+.container {
+	margin:0 auto;
+	background-color: white;
+	width: 960px;
+	margin-top:90px; 
+}
+.entryImg{
+	background-color: none;
+}
+
+.entryText{
+	margin-top: 5px;
+	margin-bottom: 5px;
+	background-color: white;
+	text-align: center; 
+	width:180px;
+	font-size: 12px;
+	float:center;
+
+}
+.entryText p,h2{
+	display:inline; 
+	margin:0;
+}
+
+
+.entryWrapper{
+	background-color: white;
+	width: 180px;
+	display:inline-block;
+	margin: 40px 10px 10px 15px;
+	padding: 0px;
+	-webkit-box-shadow: 1px 1px 5px 0px rgba(50, 50, 50, 1);
+	-moz-box-shadow:    1px 1px 5px 0px rgba(50, 50, 50, 1);
+	box-shadow:         1px 1px 5px 0px rgba(50, 50, 50, 1);
+	
+}
+.imgStyle{
+	background-color: none;
+	width:180px;
+	height: 180px;
+	
+	
+}
+
+.logotype{
+	position: absolute;
+	margin:-55px 0 0 0;
+	z-index: 2;
+	position: fixed;
+	z-index: 20;
+}
+
+.logotype img{
+	height: 60px;
+	z-index: 20;
+}
+
+.product{
+ 		float: left;
+ 		background-color: white;
+ 		border: 2px solid #c5d0ed;
+ 		border-radius: 5px;
+ 		padding: 20px;
+ }
+
+.product iframe{
+ 	width: 350px;
+ 	height: 350px;
+  	text-align: center; 
+ 	margin: auto;
+ 	border:none;
+
+ }
+
+  .product img{
+ 		width:350px; 
+ 		position: absolute;
+  		z-index: 2;
+  		text-align: center;
+  		margin: auto;
+ }
+
+.product input[type="submit"],
+.product input[type="file"]{
+	background-color: #a2a2a2;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	margin: 5px;
+	border:0.5px solid black;
+	padding: 5px;
+	text-align: center;
+	border-radius: 5px;
+}
+
+
+
+
+ 
+.roster{
+	border-left: grey solid 1px;
+	border-right: grey solid 1px;
+	border-bottom: grey solid 1px;
+	width:179px;
+	
+}
+.roster:hover{
+	background-color: #ffb182;
+}
+
+.sendEntry{
+	text-align: center;
+
+}
+
+
+.sendEntryError{
+	color:red;
+	font-size: 25px;
+	margin-top: 15px;
+	padding: 8px 5px 8px 5px ;
+	border-radius: 4px;
+
+}
+
+.sendEntry input[type="submit"]{
+	background-color: #a2a2a2;
+	color: white;
+	font-weight: bold;
+	height: 50px;
+	width: 280px;
+	font-size: 30px;
+	margin: 5px;
+	border:0.5px solid black;
+	padding: 10px;
+	text-align: center;
+}
+
+.sendEntry input[type="checkbox"]{
+	width: 20px;
+	height: 20px;
+	background-color: white;
+	cursor:pointer;
+	vertical-align: middle;
+	
+}
+
+.sendEntry p{
+	margin:8px;
+
+}
+
+
+.sendEntry input{
+	border-color: #c5d0ed;
+	border: 2px solid #c5d0ed;
+	height: 35px;
+	margin:0 4px 15px 4px;
+	border-radius: 5px;
+	width:260px;
+	padding-left: 10px;
+
+
+}
+
+.sendEntry label{
+	float:left;	
+	margin-left: 25px;
+}
+
+.sendEntry .error{
+	color: red;
+}
+.sendEntry .msg {
+    display: none;
+}
+.sendEntry .success {
+    color: green;
+}
+.sendEntry .validEmail {
+    color: red;
+}
+
+
+.topNav {
+	background-color: black;
+	height: 90px;
+	width: 100%;
+	padding:10px;
+	font-color: white;
+	position: fixed;
+	float: left;
+	z-index: 10;
+
+}
+
+
+
+.votes{
+	display:inline;
+	color:#C40000;
+	margin-left: 8px;
+}
+
+
+
+/*
+------------------------------------------- Här börjar id ----------------------------------------
+*/
+
+#errorDesignerName, #errorEntryName, #errorDesignerCity, #errorDesignerEmail{
+	color:red;
+
+}
+
+#rosta{
+	background-color:#ffb182;
+	display:inline;
+	color:#000000;
+	font-family:Verdana;
+	font-size:18px;
+	height:30px;
+	line-height:20px;
+	width:130px;
+	text-decoration:none;
+	text-align:center;
+	border:none;
+	margin-left: 0px;
+
+
+
+}
+
+#rosta:active {
+	position:relative;
+}
+
+
+
+
+
+
+
+
+

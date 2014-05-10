@@ -1,0 +1,357 @@
+/*
+Detta är ett css till admin-sidan 
+Skriv allt i bokstavsordning
+Börjar med de selectorerna, sedan  classes och sist id
+*/
+
+/*
+------------------------------------------- Här börjar standardselektorerna ----------------------------------------
+*/
+
+a{
+	text-decoration: none;
+	color:black;	
+}
+
+body{
+	font-family: "Gill Sans MT",Verdana,Tahoma;
+	background-color: white;
+}
+
+button{
+
+}
+
+form{
+	margin:10px;
+
+}
+
+h1{
+	font-size: 2em;
+}
+
+h2{
+	margin:0;
+}
+
+hr{
+	width: 800px;
+	margin:10px 0 0 0 ;
+}
+
+input.field{
+	width:750px;
+}
+
+input.field.title{
+	font-size: 1.5em;
+	padding:0.2em; 
+}
+
+label.field{
+	margin-right: 10px;
+	display: block;
+}
+
+
+nav{
+	margin-left: 191px;
+	margin-top: 70px;
+}
+
+nav .active{
+	background: rgba(152, 152, 152, 0.5);
+	display: inline;
+
+}
+
+p{
+	font-family: "Gill Sans MT",Verdana,Tahoma;
+
+}
+
+p, .button{
+	display: inline;
+	margin: 3px;
+	vertical-align:middle;
+}
+
+
+/* ----- En klass som snyggar till formulären på text-sidan ----*/
+textarea.field {
+	width: 750px;
+	height: 300px;
+}
+
+textarea.field.text{
+	padding:0.5em;
+}
+
+
+/*
+---------------------------------------------- Här börjar classes ----------------------------------------
+*/
+
+/*------ Texten "Antal bidrag" på statistik-sidan ---- */
+
+
+/*------- Den pil som visar vilken sektion man är på i respektive sida ------ */
+.arrow{
+	content:">";
+	font-weight:bold;
+	font-size: 20px;
+	text-align: left;
+	margin-left:0;
+	padding-left: 0;
+	
+}
+
+.arrow, 
+.leftNav li{
+	display: inline-block;
+}
+
+
+
+.backgroundButton{
+	background-color:#c4db8d;
+	border-radius: 10px;
+	text-indent:0;
+	border:1px solid gray;
+	display:inline-block;
+	color:#000000;
+	height:55px;
+	line-height:55px;
+	width:55px;
+	text-align: center;
+	margin-bottom: 5px;
+
+}
+
+.backgroundButtonContent{
+	margin: 10px 15px;
+
+}
+
+
+.lightGreen{
+	background-color: #bae860;
+}
+.lightRed{
+	background-color: #e89489;
+}
+.yellow{
+	background-color: #f7e859;
+}
+.lightBlue{
+	background-color: #7db7ff;
+}
+.pink{
+	background-color: #ff86b6;
+}
+.green{
+	background-color: #2caa23;
+}
+.red{
+	background-color: #a90808;
+}
+.blue{
+	background-color: #2f27cc;
+}
+.white{
+	background-color: #ffffff;
+}
+.black{
+	background-color: #000000;
+	color: white;
+}
+
+
+/*vad är detta nedanför?*/
+.classname:hover {
+	background-color:#5cb811;
+}
+
+.classname:active {
+	position:relative;
+	top:1px;
+}
+/*vad är detta ovanför?*/
+
+
+.content{
+	margin-left: 250px;
+	margin-top: 30px;
+}
+
+.entryBtn{
+
+	width:30px;
+	height:60px;
+	float:left;
+	margin-left: 8px;
+	margin-bottom: 10px;
+	
+}
+.entryImg{
+	
+}
+
+.entryText{
+	width:100px;
+	font-size: 12px;
+	float:left;
+	margin-left: 3px;
+
+}
+.entryText p,h3{
+	display:inline; 
+	margin:0;
+}
+.votes{
+	color:red;
+}
+
+.entryWrapper{
+	outline:grey solid 1px;
+	width:150px;
+	float:left;
+	margin: 20px;
+	padding: 5px;
+	
+}
+
+.field{
+	width:250px;
+	display: block;
+}
+
+.h1Admin{
+	margin-bottom: 0;
+	font-size: 2em;
+	font-weight: bold;
+}
+
+.imgStyle{
+	width:100%;
+	height:150px;
+	outline: grey solid 1px; 
+	
+}
+
+
+.leftNav{
+	float: left;
+	background-color: #dcdcdc;
+	height: 678px;
+	width: 201px;
+	display: block;
+}
+
+.leftNavEntry{
+
+	float: left;
+	background-color: #dcdcdc;
+	height: 100vh;
+	width: 201px;
+	display: block;
+}
+
+}
+
+
+.leftNav a, a:visited, a:hover, a:active{
+	color:black;
+
+} 
+
+.leftNav li{
+	list-style-type: none;
+	color:black;
+	margin: 10px 10px 10px 10px;
+	display: block;
+
+}
+
+.loginForm {
+	margin: 10% auto;
+	text-align: right;
+	line-height: 40px;
+    width: 250px;
+    height: 120px;
+    background-color: #dcdcdc;
+    /*border-radius: 0px;*/
+    box-shadow: 1px 1px 1px -1px;
+
+
+
+
+}
+
+.logoPreview {
+	width:250px;
+	height:85px;
+	outline: grey solid 1px;
+	background-color: #000000;
+}
+
+
+.statisticContent h3{
+	margin: 0 0 0 20px;
+	float:left;
+
+}
+
+.statisticContent p{
+	font-size: 70px;
+	float: right;
+	margin:0 20px 0 0;
+	padding: 0 10px 0 0; 
+	border-right: 2px solid #aaaaaa;
+}
+
+.statisticContent td{
+	width: 250px;
+	height: 50px;
+
+}
+
+.topNav{
+	background-color: black;
+	height: 90px;
+	width: 100%;
+	padding:10px;
+
+}
+
+
+.topNav a{
+	color:white;
+	padding: 0 10px 8px 10px;
+
+}
+
+.wrapper {
+	width: 100%;
+	margin: auto;
+}
+
+.logbox{
+	float: left;
+	background-color: #dcdcdc;
+	height: 678px;
+	width: 201px;
+	display: block;
+}
+
+
+
+
+/*
+------------------------------------------------- Här börjar id ----------------------------------------
+*/
+
+#id{
+
+}

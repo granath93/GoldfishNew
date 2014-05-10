@@ -17,7 +17,7 @@ $inspentries = 'SELECT *
 $topentries = 'SELECT *
 	FROM Entry, Designer 
 	GROUP BY Entry.entryName, Entry.entryImage, Entry.timeStamp
-	ORDER BY votes DESC LIMIT 8';
+	ORDER BY votes DESC LIMIT 9';
 
 $dateentries = 'SELECT *
 	FROM Entry, Designer 
