@@ -307,13 +307,13 @@ textarea.field.text{
 	margin-left: 30px;
 }
 
-.green{
+.mailGreen{
 	color:#608341;
 	background-color: white;
 	
 }
 
-.red{
+.mailRed{
 	color:#a90808;
 	background-color: white;
 

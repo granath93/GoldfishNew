@@ -30,11 +30,11 @@ $res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno
 
 	if($agree == 'n'){
 		$answer = "Nej";
-		$color="red";
+		$color="mailRed";
 	}
 	if($agree == 'y'){
 		$answer = "Ja";
-		$color="green";
+		$color="mailGreen";
 	}
 
 
