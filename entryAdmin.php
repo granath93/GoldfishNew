@@ -22,7 +22,7 @@ include("includes/db.php");
 	if (isset($_POST['submit'])){
 
 	   if ($_POST['select'] == "2")  {
-	   		$sort = "Sorterat efter de senaste bidragen"; 
+	   		$sort = "Sorterat efter de senaste inkomna bidragen"; 
 
 	  }
 

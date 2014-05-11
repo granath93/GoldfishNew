@@ -16,8 +16,9 @@ $inspentries = 'SELECT *
 
 $topentries = 'SELECT *
 	FROM Entry, Designer 
+	WHERE Entry.accepted = "y"
 	GROUP BY Entry.entryName, Entry.entryImage, Entry.timeStamp
-	ORDER BY votes DESC LIMIT 9';
+	ORDER BY votes DESC LIMIT 8';
 
 $dateentries = 'SELECT *
 	FROM Entry, Designer 
