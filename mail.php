@@ -19,7 +19,7 @@ $res = $mysqli->query($query) or die("Could not query database" . $mysqli->errno
 
 	<div class="h1Admin">Alla deltagarens email</div><br><br>
 	
-	&nbsp;&nbsp;&nbsp;<a href="entryAdmin.php"><button>Tillbaka till alla bridag </button></a><br>
+	&nbsp;&nbsp;&nbsp;<a href="entryAdmin.php"><button>Tillbaka till alla bidrag</button></a><br>
 <hr>
 <p>Vill ha nyhetsbrev</p> <p class="mailTitle">Email</p>
 <hr>
