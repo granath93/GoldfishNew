@@ -296,6 +296,37 @@ textarea.field.text{
 	background-color: #000000;
 }
 
+/* ------------------------- DESIGN TILL MAIL-LISTAN börjar här----------------------- */
+
+.mailTable {
+	width: 153px;
+}
+
+.mailTitle {
+	display: inline;
+	margin-left: 30px;
+}
+
+.green{
+	color:#608341;
+	background-color: white;
+	
+}
+
+.red{
+	color:#a90808;
+	background-color: white;
+
+}
+
+/* ------------------------- DESIGN TILL MAIL-LISTAN slutar här----------------------- */
+
+.productStyle{
+	z-index: 4;
+	position: absolute;
+	float: left;
+	width:150px;
+}
 
 .statisticContent h3{
 	margin: 0 0 0 20px;

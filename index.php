@@ -106,6 +106,7 @@ while($row = $res->fetch_object()) {
 									<h2><?php echo $row->entryName ?></h2> 
 								</div>
 								<div class="entryImg">
+									<img class="productStyle " src="images/product/productImage.png">
 									<img class="imgStyle" src="<?php echo $row->entryImage ?>">
 								</div>
 									
@@ -209,6 +210,7 @@ while($row = $res->fetch_object()) {
 									<h2><?php echo $row->entryName ?></h2> 
 								</div>
 								<div class="entryImg">
+									<img class="productStyle" src="images/product/productImage.png">
 									<img class="imgStyle" src="<?php echo $row->entryImage ?>">
 								</div>
 									
@@ -250,6 +252,7 @@ while($row = $res->fetch_object()) {
 									<h2><?php echo $row->entryName ?></h2> 
 								</div>
 								<div class="entryImg">
+									<img class="productStyle" src="images/product/productImage.png">
 									<img class="imgStyle" src="<?php echo $row->entryImage ?>">
 								</div>
 									

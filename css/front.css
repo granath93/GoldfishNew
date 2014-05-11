@@ -8,6 +8,7 @@ Börjar med de selectorerna, sedan id och sist classes
 /*
 ------------------------------------------- Här börjar standardselektorerna ----------------------------------------
 */
+
 a{
 	text-decoration: none;
 	color: white;
@@ -202,7 +203,14 @@ ul.backgroundNav li a:hover, ul.backgroundNav li a.selected{
 }
 
 
-
+.productStyle{
+	z-index: 4;
+	position: absolute;
+	float: left;
+	width:150px;
+	width:180px;
+	height: 180px;
+}
 
  
 .roster{

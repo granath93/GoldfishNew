@@ -89,6 +89,7 @@ include("includes/db.php");
 							
 							<div class="entryWrapper">
 								<div class="entryImg">
+									<img class="productStyle " src="images/product/productImage.png">
 									<img class="imgStyle" src="<?php echo $row->entryImage ?>">
 								</div>
 									
