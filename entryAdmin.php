@@ -52,6 +52,7 @@ include("includes/db.php");
 				<?php echo $sort ?>
 
 					<form method="post" action="" enctype="multipart/form-data">
+
 						<select name="select">
 							<option value="1">Sortera bidragen</option>
 		 					<option value="2">Senaste bidragen</option>
@@ -62,6 +63,11 @@ include("includes/db.php");
 					</form>
 					
 						&nbsp;&nbsp;&nbsp;<a href="mail.php"><button>Visa alla mail </button></a><br>
+						<div class="helpImgs" style="position:absolute;margin-left:420px; margin-top:-25px;">
+						<img src="images/godkannBtn.png"><p> = Godkänn bidrag</p>
+						<img src="images/godkannGraBtn.png"><p> = Godkänt bidrag</p>
+						<img src="images/tabortBtn.png"><p> = Ta bort bidrag</p>
+						</div>
 
 										
 					<?php 
