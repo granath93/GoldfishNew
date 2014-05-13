@@ -114,7 +114,7 @@ while($row = $res->fetch_object()) {
 								<div class="roster">
 								
 								<a href='addVote.php?entryId=<?php echo $row->entryId; ?>'>
-								<input id="rosta" name="rosta" type="submit" value="Lägg din röst!" /></a>
+								<input id="rosta" name="rosta" type="submit" value="Lägg din röst!" onclick="addVote();" /></a>
 								<div class="arrow-right"></div>
 								<p class="votes"><strong><?php echo $row->votes ?></strong></p>
 								</div>	
@@ -217,7 +217,7 @@ while($row = $res->fetch_object()) {
 									
 								<div class="roster">
 								<a href='addVote.php?entryId=<?php echo $row->entryId; ?>'>
-								<input id="rosta" name="rosta" type="submit" value="Lägg din röst!" /></a>
+								<input id="rosta" name="rosta" type="submit" value="Lägg din röst!" onclick="addVote();" /></a>
 								<div class="arrow-right"></div>
 								<p class="votes"><strong><?php echo $row->votes ?></strong></p>
 								</div>	
@@ -259,7 +259,7 @@ while($row = $res->fetch_object()) {
 									
 								<div class="roster">
 								<a href='addVote.php?entryId=<?php echo $row->entryId; ?>'>
-								<input id="rosta" name="rosta" type="submit" value="Lägg din röst!" /></a>
+								<input id="rosta" name="rosta" type="submit" value="Lägg din röst!" onclick="addVote();"  /></a>
 								<div class="arrow-right"></div>
 								<p class="votes"><strong><?php echo $row->votes ?></strong></p>
 								</div>	

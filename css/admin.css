@@ -233,6 +233,18 @@ textarea.field.text{
 	font-weight: bold;
 }
 
+
+.helpImgs{
+	position:absolute;
+	margin-left:420px;
+	 margin-top:-25px;
+}
+
+.helpImgs img{
+	vertical-align:text-top;
+}
+
+
 .imgStyle{
 	width:100%;
 	height:150px;
@@ -348,6 +360,15 @@ textarea.field.text{
 
 }
 
+.topEntry{
+	position: absolute;
+	margin-left: 400px;
+}
+
+
+.topEntryTitle{
+	margin-left: 350px;
+}
 .topNav{
 	background-color: black;
 	height: 90px;

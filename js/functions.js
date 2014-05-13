@@ -1,3 +1,12 @@
+function addVote(){
+alert("Du har röstat på ett bidrag. \nDesignaren tackar för din röst!");
+
+}
+
+
+
+
+
 function checked(x){
 	var buttonYes;
 	var buttonNo;

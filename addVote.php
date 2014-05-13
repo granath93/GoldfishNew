@@ -16,10 +16,9 @@ END;
 	
 	while($row = $res->fetch_object()) { 
 		$entryVote = ($row->votes);
-				$entryVote = $entryVote + 1; 
-	
-	
-		}
+				$entryVote = $entryVote + 1; ?>
+		
+	<?php	}
 	
 
 	$query =<<<END
