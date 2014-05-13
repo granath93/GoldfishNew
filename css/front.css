@@ -261,10 +261,13 @@ ul.backgroundNav li a:hover, ul.backgroundNav li a.selected{
 	
 }
 
+
+
 .sendEntry p{
 	margin:8px;
 
 }
+
 
 
 .sendEntry input{
@@ -352,10 +355,210 @@ ul.backgroundNav li a:hover, ul.backgroundNav li a.selected{
 }
 
 
+@media all and (max-width:1000px){
+.logotype img{
+		margin-left: 20px;
+	}
+
+}
+
+@media all and (max-width:940px){
+	
+	ul.backgroundNav{
+		margin-left: 40%;
+	}
+
+	.container{
+		width: 103%;
+	}
+
+	
+	.content,
+	.contenttext{
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.inspire{
+		width: 30%;
+		margin-left: 20px;
+	}
+
+	.line{
+		width: 95%;
+	}
+
+	
+	.wrapper{
+		width: 100%;
+	}
+
+}
+@media only screen and (max-width : 890px) {
+.product{
+	margin-left: 50px;
+	margin-right: auto;
+}
+.sendEntry{
+	float:left;
+	margin-left: 100px;
+	
+}
+
+.sendEntry input[type='text'],
+.sendEntry input[type='submit']{
+	display: block;
+}
 
 
 
+}
+
+@media only screen and (max-width : 800px) {
+
+ul.backgroundNav{
+		margin-left: 30%;
+	}
+
+
+.entryWrapper{	
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+.sendEntry input[type="submit"], 
+.sendEntry input[type="text"]{
+	width: 100%;
+	margin-left: 20px;
+	font-size: 20px;
+}
+
+}
 
 
 
+@media only screen and (max-width : 700px) {
 
+ul.backgroundNav{
+		margin-left: 20%;
+	}
+
+.logotype img{
+	height: 50px;
+}
+
+
+.inspire{
+	width: 50%;
+	margin-left: 20px;
+}
+
+
+}
+
+
+
+@media only screen and (max-width : 600px) {
+
+ul.backgroundNav{
+		margin-left: 0;
+	}
+
+ul.backgroundNav li a{
+	margin:1px;
+	padding:5px 5px 12px 9px;
+	font-size: 15px;
+
+}
+
+.entryWrapper{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.logotype img{
+	 display: none;
+}
+
+.product{
+	margin-left: 20px;
+	
+}
+
+.product 
+{
+	width: 85%;
+	margin-left: auto;
+	margin-right: auto;
+} 
+
+}
+
+
+@media only screen and (max-width : 450px) {
+
+h1{
+	font-size: 20px;
+}
+
+p{
+	font-size: 12px;
+}
+
+ul.backgroundNav{
+	margin-top: 20px;
+	
+}
+
+ul.backgroundNav li a{
+	padding:2px 2px 5px 6px;
+	font-size: 10px;
+
+}
+
+.content{
+	width:90%;
+	margin-left: 20px;
+
+}
+.container{
+		margin:0 auto;
+	}
+
+.product, 
+.sendEntry{
+	width: 85%;
+	margin-left: auto;
+	margin-right: auto;
+} 
+
+.product input[type="submit"],
+.product input[type="file"]{
+	width: 100%;
+	margin-left: 0px;
+	font-size: 15px;
+}
+
+.product iframe,.product img{
+	width: 250px;
+	height: 250px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.sendEntry input[type="submit"], 
+.sendEntry input[type="text"]{
+	width: 100%;
+	margin-left: 20px;
+	font-size: 20px;
+}
+
+.topNav{
+	height: 33px;
+}
+
+
+.wrapper{
+	width: 400px;
+}
+}

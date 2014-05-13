@@ -16,7 +16,6 @@ include("includes/db.php");
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
 <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-<link rel="stylesheet" href="css/fondation.min.css" >
 <link rel="stylesheet" href="css/normalize.css" >
 <link rel="stylesheet" href="css/front.css" >
 <script src="js/functions.js" charset="utf-8"></script>

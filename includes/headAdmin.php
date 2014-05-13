@@ -12,10 +12,7 @@
 <body>
 <?php session_start();
 
-/* feedback att man är inloggad
-if(isset($_SESSION['user_id'])){
-	echo 'you are signed in as an Admin maan';
-}*/
+
 if(!isset($_SESSION['user_id'])){
 	header('location:login.php');
 } ?>

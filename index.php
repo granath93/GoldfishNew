@@ -27,31 +27,6 @@ $dateentries = 'SELECT *
 	ORDER BY Entry.timeStamp DESC LIMIT 8';
 
 
-/*
-$inspentries = 'SELECT Entry.entryId, Entry.entryName, Entry.accepted, Entry.timeStamp, Entry.entryImage, COUNT(EntryVoter.entryId) as votes
-	FROM Entry 
-	LEFT JOIN EntryVoter
-	ON Entry.entryId=EntryVoter.entryId
-	GROUP BY Entry.entryName, Entry.entryImage, Entry.timeStamp
-	ORDER BY  votes DESC LIMIT 4';
-
-$topentries = 'SELECT Entry.entryId, Entry.entryName, Entry.accepted, Entry.timeStamp, Entry.entryImage, COUNT(EntryVoter.entryId) as votes
-	FROM Entry 
-	LEFT JOIN EntryVoter
-	ON Entry.entryId=EntryVoter.entryId
-	GROUP BY Entry.entryName, Entry.entryImage, Entry.timeStamp
-	ORDER BY votes DESC LIMIT 8';
-
-$dateentries = 'SELECT Entry.entryId, Entry.entryName, Entry.accepted, Entry.timeStamp, Entry.entryImage, COUNT(EntryVoter.entryId) as votes
-	FROM Entry 
-	LEFT JOIN EntryVoter
-	ON Entry.entryId=EntryVoter.entryId
-	WHERE Entry.accepted = "y"
-	GROUP BY Entry.entryName, Entry.entryImage, Entry.timeStamp
-	ORDER BY Entry.timeStamp DESC LIMIT 8';
-
-*/
-
 //hämtar från tabellen text i databasen
 $res = $mysqli->query('SELECT * FROM Text, Logotype') or die("Could not query database" . $mysqli->errno . 
 " : " . $mysqli->error);
@@ -92,7 +67,7 @@ while($row = $res->fetch_object()) {
 
 			<p><?php echo nl2br($welcomeText); ?></p><br>
 			</div>
-			<img src="images/tjuvkika.png"><br>
+			<img class="inspire" src="images/tjuvkika.png"><br>
 					 <?php 
 
 					while($row = $entriesRes->fetch_object()) :  
@@ -129,7 +104,7 @@ while($row = $res->fetch_object()) {
 
 
 	
-	<img src="images/linje.png" >
+	<img class="line" src="images/linje.png" >
 			
 
 <div id="design" ></div>
@@ -164,15 +139,15 @@ while($row = $res->fetch_object()) {
 
 				<label for="entryName"> <p>Döp ditt bidrag</p> </label> <div id="errorEntryName"></div>
 
-				<input  id="entryName" name="entryName" value=""  ><br>
+				<input  type="text" id="entryName" name="entryName" value=""  ><br>
 
 				<label for="designerCity"> <p>Ort</p> </label> <div id="errorDesignerCity"></div>
 
-				<input  id="designerCity" name="designerCity"  value=""><br>
+				<input  type="text" id="designerCity" name="designerCity"  value=""><br>
 
 				<label for="designerEmail"> <p>Email</p> </label> <div class="msg error">Ingen riktig email</div> <div class="msg success">Rätt!</div>
  
-				<input  id="designerEmail" name="designerEmail"  value=""><br>
+				<input  type="text" id="designerEmail" name="designerEmail"  value=""><br>
 
 				<label for="checkbox" name="agreeMailLabel">Ja, jag vill ha nyhetsbrev</label>
 
@@ -190,7 +165,7 @@ while($row = $res->fetch_object()) {
 
 
 	
-	<img src="images/linje.png">
+	<img  class="line" src="images/linje.png">
 
 
 <div id="toplist"></div>
@@ -231,7 +206,7 @@ while($row = $res->fetch_object()) {
 
 
 
-	<img src="images/linje.png" >
+	<img class="line" src="images/linje.png" >
 
 	<div id="latest"></div>
 		<div class="content" >
@@ -278,7 +253,7 @@ while($row = $res->fetch_object()) {
 
 
 
-	<img src="images/linje.png">
+	<img class="line" src="images/linje.png">
 
 	<div id="rule"></div>
 		<div class="content" >
@@ -293,7 +268,7 @@ while($row = $res->fetch_object()) {
 			
 
 		</div>
-<img src="images/linje.png">
+<img class="line" src="images/linje.png">
 
 
 <?php include("includes/footerFront.php");
