@@ -57,7 +57,7 @@ label.field{
 
 nav{
 	margin-left: 191px;
-	margin-top: 70px;
+	margin-top: 50px;
 }
 
 nav .active{
@@ -299,6 +299,12 @@ textarea.field.text{
 
 
 
+}
+.logoSmall {
+position:absolute;
+margin-top:-15px;
+margin-left:-15px;
+z-index:10;
 }
 
 .logoPreview {

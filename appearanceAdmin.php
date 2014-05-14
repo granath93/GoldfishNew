@@ -81,10 +81,10 @@ END;
 	}?>
 		<div class="h1Admin">Bakgrund</div>
 	
-	<p> Ange en sex-siffrig Hex-kod (000000, svart) för att ange sidans bakgrundsfärg<br></p>
+	<p> Ange en sex-siffrig Hex-kod (Se nedan för exempel-färgkoder) för att ange sidans bakgrundsfärg.<br></p>
 	
 		<form action="appearanceAdmin.php?p=Background" method="post">
-				<label class="field" for ="background">Välj Bakgrundsfärg:</label>
+				<label class="field" for ="background">Välj bakgrundsfärg:</label>
 				<textarea id="background" name="background"><?php echo $showBackground ?></textarea><br>
 				<button name="save">Spara </button>  &nbsp; &nbsp; &nbsp; <?php echo $feedback ?>
 			</form>
@@ -194,7 +194,7 @@ END;
 	<br>
 	<!-- Formuläret där användaren laddar upp logotypen från egen dator -->
 	<form method="post" action="appearanceAdmin.php?p=Logotype" enctype="multipart/form-data">
-	      <label>Välj en bild som är din logotyp </label>
+	      <label>Välj logotyp </label>
 	      <input type="file" name="logotypeImg"/>
 	      <input type="submit" name="uploadButton" value="Ladda upp"/>
 	   &nbsp;&nbsp;  <button name="saveImg">Spara </button>    &nbsp;&nbsp;  <?php echo $feedbackLogotype; ?> 
@@ -209,13 +209,13 @@ END;
 	
 	<form method="post" action="appearanceAdmin.php?p=Logotype" enctype="multipart/form-data">
 	<!-- Formuläret där användaren sparar en URL kopplat till logotypen -->
-	    	<label>Skriv in en URL som din logotyp skall länka till på själva webbsidan</label><br><br>
+	    	<label>Skriv in den URL som kampanjsidans logotyp ska länka till.</label><br><br>
 	    	<input type='field' name="logotypeUrl"/>
 	    	<button name="saveUrl">Spara</button>   &nbsp;&nbsp;  <?php echo $feedbackUrl; ?>
 	    </form>
 	<?php
 	//Skriver ut URL-en användaren har matat in
-	echo "Din URL-länk är nu: <strong>". $logotypeUrl . "</strong>";
+	echo "Vald URL: <strong>". $logotypeUrl . "</strong>";
 	
 	//Användaren trycker på "spara" för att spara URL-en till databasen med en "UPDATE"-sats 
 	

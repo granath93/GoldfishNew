@@ -19,8 +19,9 @@ if(!isset($_SESSION['user_id'])){
 <div class="wrapper">
 
 <div class="topNav">
+<a href="indexAdmin.php"><img src ="images/logotype/LogoSmallWhite.png" class="logoSmall" /></a>
 	<nav>
-
+	
 		<a class=" <?php if($currentPage=="index")echo "active"?>"  		href="indexAdmin.php">Statistik 				</a>
 		<a class=" <?php if($currentPage=="entry")echo "active"?>"  		href="entryAdmin.php">Bidrag 					</a>
 		<a class=" <?php if($currentPage=="product")echo "active"?>"  		href="productAdmin.php">Produkt					</a>

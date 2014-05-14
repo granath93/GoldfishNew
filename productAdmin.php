@@ -61,11 +61,11 @@ END;
 ?>
 
 		<div class="h1Admin">Produkt</div>
-		Välj en bild som skall representera produkten som skall designas. <br>
+		Välj en bild för att representera produkten som skall designas. <br>
 	<ul>
-	<li>	Bilden får endast vara formatet .png eller .gif. <br></li>
-	<li>	Bilden skall vara kvadratisk, rekommenderar 400*400px stor.
-	<li>	Bilden skall vara transparent innanför konturerna och ha ett vitt lager utanför konturerna.<br></li>
+	<li>	Bilden skall vara i antingen gif (ej animerad) eller png-format. <br></li>
+	<li>	Bilden skall vara kvadratisk, rekommenderat 400*400 pixlar stor.
+	<li>	Bilden skall vara transparent innanför konturerna och ha en vit yta utanför konturerna.<br></li>
 	<li>	Bilden kan även innehålla skuggor för att göra produkten effektfull. <br><br></li>
 </ul>
 
