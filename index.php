@@ -163,15 +163,15 @@ $entriesDate = $mysqli->query($dateentries) or die("Could not query database" . 
 									<form action="index.php#design" method="post" >
 										<label for="designerName"> <p>Ditt namn</p> </label> <div id="errorDesignerName"></div>
 
-										<input  type="text" id="designerName" name="designerName" value=""><br>
+										<input  type="text" id="designerName" name="designerName" value="" maxlength="18"><br>
 
 										<label for="entryName"> <p>Döp ditt bidrag</p> </label> <div id="errorEntryName"></div>
 
-										<input  type="text" id="entryName" name="entryName" value=""  ><br>
+										<input  type="text" id="entryName" name="entryName" value="" maxlength="10" ><br>
 
 										<label for="designerCity"> <p>Ort</p> </label> <div id="errorDesignerCity"></div>
 
-										<input  type="text" id="designerCity" name="designerCity"  value=""><br>
+										<input  type="text" id="designerCity" name="designerCity" value="" maxlength="20"><br>
 
 										<label for="designerEmail"> <p>Email</p> </label> <div class="msg error">Ingen riktig email</div> <div class="msg success">Rätt!</div>
 						 
