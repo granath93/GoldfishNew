@@ -1,5 +1,5 @@
-</div>
+<!-- Avslutar alla våra sidor i front-end, webbsidan utåt mot kunden -->
 
-
-</body>
+		</div>
+	</body>
 </html>

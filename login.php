@@ -1,17 +1,25 @@
+<!--
+DENNA FIL ÄR INLOGGNINGSSIDAN TILL ADMINDELEN
+-->	
+
+
 <!DOCTYPE html>
-<html>
-<head>
-<link rel="stylesheet" href="css/normalize.css" >
-<link rel="stylesheet" href="css/admin.css" >
-<script src="#" charset="utf-8"></script>
-	<title>Login</title>
-</head>
+	<html>
+		<head>
+			<link rel="stylesheet" href="css/normalize.css" >
+			<link rel="stylesheet" href="css/admin.css" >
+			<meta charset="utf-8">
+			<script src="#" charset="utf-8"></script>
+				<title>Login</title>
+		</head>
 <body>
 
 
 
 <?php
+//Lägger till databasen på sidan
 require 'includes/db.php';
+$feedback="";
 //tom array som ger värden vid fel
 $error = array();
 //kollar om textrutorna är tomma
@@ -53,29 +61,23 @@ if(!empty($_POST)){
 		
 	foreach($error as $e){
 	
-		echo '<p>'.$e.'</p>';
+		$feedback= '<p>'.$e.'</p>';
 	}
 		
-
-
 }	
 ?>
 
+	<!-- Inloggnings-formuläret -->
+	<div class="loginFeedback"><?php echo $feedback; ?></div>
+		<div class="loginForm">
+		
+			<form method="post" action="">
 
-<!doctype html>
-<html>
-<head>
-	<meta charset="utf-8">
-</head>
-<body>
-	<div class="loginForm">
-<form method="post" action="">
-
-	Admin <input type="text" name="user"><br/>
-	Lösenord <input type="password" name="password"><br/>
-	<input type="submit" name="submit" value="Logga in"  />
-</div>
-
-</form>
-</body>
+					Admin <input type="text" name="user"><br/>
+					Lösenord <input type="password" name="password"><br/>
+					<input type="submit" name="submit" value="Logga in"  />
+			</form>
+		</div>
+		
+	</body>
 </html>

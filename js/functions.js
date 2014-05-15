@@ -1,161 +1,121 @@
+// ALLA FUNKTINER SOM KRÄVER JAVA SCRIPT PÅ ADMIN OCH FRONT-END SIDAN
+
+
+//En popupruta som indikerar att besökaren har röstat på ett bidrag
 function addVote(){
-alert("Du har röstat på ett bidrag. \nDesignaren tackar för din röst!");
-
+	alert("Du har röstat på ett bidrag. \nDesignern tackar för din röst!");
 }
 
 
-
-
-
-function checked(x){
-	var buttonYes;
-	var buttonNo;
-
-	buttonYes=document.getElementById('change1');
-
-		if (x==1){
-
-		buttonYes.src="images/godkannGraBtn.png";
-
-		}
-
-		if (x==2){
-
-		buttonYes.src="images/godkannBtn.png";
-		
-		}
-
-		buttonNo=document.getElementById('change2');
-
-		if (x==1){
-
-		buttonNo.src="images/tabortBtn.png";
-
-		}
-
-		if (x==2){
-
-		buttonNo.src="images/tabortBtnGra.png";
-		
-		}
-
-
-}
-
-/* ----------------------- FORMLÄRET I FRONTEND SKICKA BIDRAGET ---------------- */
+/* ----------------------- 
+FORMLÄRET I DESIGNSCENEN FÖR ATT SKICKA BIDRAGET 
+VISAR ERROR BREDVID TEXTEN OM RORMULÄRET INTE ÄR RÄTT IFYLLT
+---------------- */
 
 $(document).ready(function() {
 
 
-$('#designerName').focus(function() {
+	$('#designerName').focus(function() {
 
-	var errorHolder = document.getElementById('errorDesignerName')
+		var errorHolder = document.getElementById('errorDesignerName')
 
-  this.style.backgroundColor = ''
-  this.style.borderColor = ''
-  errorHolder.innerHTML = ''
+	  this.style.backgroundColor = ''
+	  this.style.borderColor = ''
+	  errorHolder.innerHTML = ''
 
-});
+	});
 
-$('#entryName').focus(function() {
+	$('#entryName').focus(function() {
 
-	var errorHolder = document.getElementById('errorEntryName')
+		var errorHolder = document.getElementById('errorEntryName')
 
-  this.style.backgroundColor = ''
-  this.style.borderColor = ''
-  errorHolder.innerHTML = ''
+	  this.style.backgroundColor = ''
+	  this.style.borderColor = ''
+	  errorHolder.innerHTML = ''
 
-});
-
-
-$('#designerCity').focus(function() {
-
-	var errorHolder = document.getElementById('errorDesignerCity')
-
-  this.style.backgroundColor = ''
-  this.style.borderColor = ''
-  errorHolder.innerHTML = ''
-
-});
+	});
 
 
-$('#designerEmail').focus(function() {
+	$('#designerCity').focus(function() {
 
-	var errorHolder = document.getElementById('errorDesignerEmail')
+		var errorHolder = document.getElementById('errorDesignerCity')
 
-  this.style.backgroundColor = ''
-    this.style.borderColor = ''
-  errorHolder.innerHTML = ''
+	  this.style.backgroundColor = ''
+	  this.style.borderColor = ''
+	  errorHolder.innerHTML = ''
 
-});
-
-
-$('#designerName').blur(function() {
+	});
 
 
-  if ($(this).val()=='')
-   {
+	$('#designerEmail').focus(function() {
 
-   	var errorHolder = document.getElementById('errorDesignerName')
+		var errorHolder = document.getElementById('errorDesignerEmail')
 
-    this.style.backgroundColor = '#ffc7c7'
-      this.style.borderColor = 'gray'
-    errorHolder.innerHTML = 'Fyll i fältet'
+	  this.style.backgroundColor = ''
+	  this.style.borderColor = ''
+	  errorHolder.innerHTML = ''
 
-  }
-
-});
-
-$('#entryName').blur(function() {
+	});
 
 
-  if ($(this).val()=='')
-   {
+	$('#designerName').blur(function() {
 
-   	var errorHolder = document.getElementById('errorEntryName')
+	  if ($(this).val()=='')
+	   {
 
-    this.style.backgroundColor = '#ffc7c7'
-    this.style.borderColor = 'gray'
-    errorHolder.innerHTML = 'Fyll i fältet'
+	   	var errorHolder = document.getElementById('errorDesignerName')
 
-  }
+	    this.style.backgroundColor = '#ffc7c7'
+	      this.style.borderColor = 'gray'
+	    errorHolder.innerHTML = 'Fyll i fältet'
 
-});
+	  }
 
-$('#designerCity').blur(function() {
+	});
 
+	$('#entryName').blur(function() {
 
-  if ($(this).val()=='')
-   {
+	  if ($(this).val()=='')
+	   {
 
-   	var errorHolder = document.getElementById('errorDesignerCity')
+	   	var errorHolder = document.getElementById('errorEntryName')
 
-    this.style.backgroundColor = '#ffc7c7'
-    this.style.borderColor = 'gray'
-    errorHolder.innerHTML = 'Fyll i fältet'
+	    this.style.backgroundColor = '#ffc7c7'
+	    this.style.borderColor = 'gray'
+	    errorHolder.innerHTML = 'Fyll i fältet'
 
-  }
+	  }
 
-});
+	});
 
-$('#designerEmail').blur(function() {
+	$('#designerCity').blur(function() {
 
+	  if ($(this).val()==''){
 
-  if ($(this).val()=='')
-   {
+	   	var errorHolder = document.getElementById('errorDesignerCity')
 
-   	var errorHolder = document.getElementById('errorDesignerEmail')
+	    this.style.backgroundColor = '#ffc7c7'
+	    this.style.borderColor = 'gray'
+	    errorHolder.innerHTML = 'Fyll i fältet'
 
-    this.style.backgroundColor = '#ffc7c7'
-    this.style.borderColor = 'gray'
-   
+	  }
 
-  }
+	});
 
-});
+	$('#designerEmail').blur(function() {
 
-/* -------------------------KOLLAR OM DET ÄR EN RIKTIG EMAIL-ADRESS -------------------------*/
+	  if ($(this).val()==''){
 
+	   	var errorHolder = document.getElementById('errorDesignerEmail')
+
+	    this.style.backgroundColor = '#ffc7c7'
+	    this.style.borderColor = 'gray'
+	   
+	  }
+
+	});
+
+/* ---------------FORMULÄRET I DESIGNSCENEN KOLLAR OM DET ÄR EN RIKTIG EMAIL-ADRESS --------------------*/
 
 	$('form input[name="designerEmail"]').blur(function () {
 		var email = $(this).val();
@@ -168,14 +128,15 @@ $('#designerEmail').blur(function() {
 			    $('.msg').hide();
 			    $('.error').show();
 			}
-
 	});
-
 
 });
 
 
-/* ------------------------- MENYN I FRONTEND -------------------------*/
+/* ---- 
+EN FUNKTION TILL MENYN I FRONTEND FÖR ATT GÖRA DEN SMOOTH OCH 
+INDIKERAR NÄR BESÖKARNE ÄR VID DE OLIKA SEKTIONERNA PÅ SIDAN
+------*/
 
 
 /*

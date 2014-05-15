@@ -1,27 +1,33 @@
+<!--
+DENNA FIL ÄR "STATISTIK"-SIDAN I ADMIN-DELEN OM HUR MÅNGA BIDRAG SOM KOMMIT IN
+-->
+
 <?php 
-$currentPage = "index";
+$pageTitle="Statistik"; //Skriver in vad som skall stå i "webb-browser-fliken"
+$currentPage = "index"; //Lägger in sidans namn in i en variabel som sedan används i toppmenyn för att indikera vilken sida admin är på
 
 include("includes/headAdmin.php"); 
 include("includes/db.php");
 
-$dayEntry =0;
+//Sätter variablerna till 0 om inga bidrag har kommit in för dagen/veckan eller månaden
+$dayEntry =0; 
 $weekEntry =0;
 $monthEntry =0;
 $totalEntry =0;
 
-//Plockar in alla bidrag och alla attribut som finns i tabellen Entry
-$res = $mysqli->query('SELECT * FROM Entry') or die("Could not query database" . $mysqli->errno . 
-" : " . $mysqli->error);
+	//Plockar in alla bidrag och alla attribut som finns i tabellen Entry
+	$res = $mysqli->query('SELECT * FROM Entry') or die("Could not query database" . $mysqli->errno . 
+	" : " . $mysqli->error);
 
-//Loopar igenom alla bidrag i tabellen Entry 
-while($row = $res->fetch_object()) { 
-	$date = strtotime($row->timeStamp); //sparar alla datum i variabeln $date
-	$date = date("d m Y", $date); //ordnar alla datum i dag, månad, år
-	$now= time(); //skapar en variabel $now som tar in dagens datum och tid
-	$now=date("d m Y", $now); //gör om dagens datum till dag, månad, år
-	$today=date("D"); //sparar dagens veckodag 
-	$firstDayOfMonth= date('01 m Y', strtotime('this month')); //skapar en variabel med veckans första datum
-	$lastMonth = date('01 m Y', strtotime('last month'));
+	//Loopar igenom alla bidrag i tabellen Entry 
+	while($row = $res->fetch_object()) { 
+		$date = strtotime($row->timeStamp); //sparar alla datum i variabeln $date
+		$date = date("d m Y", $date); //ordnar alla datum i dag, månad, år
+		$now= time(); //skapar en variabel $now som tar in dagens datum och tid
+		$now=date("d m Y", $now); //gör om dagens datum till dag, månad, år
+		$today=date("D"); //sparar dagens veckodag 
+		$firstDayOfMonth= date('01 m Y', strtotime('this month')); //skapar en variabel med veckans första datum
+		$lastMonth = date('01 m Y', strtotime('last month'));
 
 
 
@@ -53,58 +59,58 @@ while($row = $res->fetch_object()) {
 			$monthEntry ++; 
 
 		}
-}
+	}
 
 ?>
 
+<!-- Den vänstra gråa menyn -->
+	<div class="leftNav"></div>
+		<div class="content">
 
-<div class="leftNav">
-</div>
+			<!-- Rubriken för "statistik"-sidan -->
+			<div class="h1Admin">Statistik</div>
 
-<div class="content">
+ 				Antal bidrag 
+ 				<br><br>
+				
+				<!--Tabellen för hela statistiken -->
+					<div class="statisticContent">
+						<table>
+						<tr>
+							<td>
+								<h3> Idag </h3> 
+							</td>
+							<td>
+								<h3> Denna vecka </h3>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p> <?php echo $dayEntry;?> </p> 
+							</td>
+							<td>
+								<p><?php echo $weekEntry;?> </p> 
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<h3> Denna månad </h3> 
+							</td>
+							<td>
+								<h3> Totalt </h3>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p> <?php echo $monthEntry;?> </p> 
+							</td>
+							<td>
+								<p><?php echo  $totalEntry;?></p> 
+							</td>
+						</tr>
 
-	<div class="h1Admin">Statistik</div>
+						</table>
+					</div>
 
- 	Antal bidrag 
-
-	<br><br>
-	<div class="statisticContent">
-	<table>
-	<tr>
-		<td>
-			<h3> Idag </h3> 
-		</td>
-		<td>
-			<h3> Denna vecka </h3>
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<p> <?php echo $dayEntry;?> </p> 
-		</td>
-		<td>
-			<p><?php echo $weekEntry;?> </p> 
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<h3> Denna månad </h3> 
-		</td>
-		<td>
-			<h3> Totalt </h3>
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<p> <?php echo $monthEntry;?> </p> 
-		</td>
-		<td>
-			<p><?php echo  $totalEntry;?></p> 
-		</td>
-	</tr>
-
-	</table>
-
-
-</div>
+<!-- Avslutar sidan -->					
 <?php include("includes/footerAdmin.php"); ?>

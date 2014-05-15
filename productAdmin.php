@@ -1,32 +1,29 @@
-<?php 
-$currentPage = "product";
+<!--
+DENNA FIL ÄR "PRODUKT"-SIDAN I ADMIN-DELEN DÄR ADMIN KAN BYTA UT DEN PRODUKT BESÖKARNA SKALL DESIGNA PÅ FRONT-END, WEBBSIDAN UTÅT MOT BESÖKARNA
+-->
 
+<?php 
+$pageTitle="Produkt"; //Skriver in vad som skall stå i "webb-browser-fliken"
+$currentPage = "product"; //Lägger in sidans namn in i en variabel som sedan används i toppmenyn för att indikera vilken sida admin är på
+
+//Sätter variablerna till 0 om inga bidrag har kommit in för dagen/veckan eller månaden
 include("includes/headAdmin.php"); 
 include("includes/db.php");
 
-
-$session = isset($_GET['p']) ? $_GET['p'] : 'product' ;
-$productId = 1;
-$feedback="";
-
+	$feedback=""; //Hålls tom för att senare kunna fyllas och skrivas ut
+	$productId = 1;
 ?>
 
+	<!-- Vänstra gråa menyn på sidan -->
+	<div class="leftNav"></div>
+		<div class="content">
 
-<div class="leftNav">
-	
-</div>
 
-
-<div class="content">
-
-<?php
-
-if($session=="product"){
-	$arrow="arrow-right"; 
-
-				$query =<<<END
-				SELECT * FROM Product
-				WHERE productId = $productId		
+	<?php 	
+			//Hämtar allt ur "product"-tabellen
+			$query =<<<END
+			SELECT * FROM Product
+			WHERE productId = '$productId'		
 END;
 
 		//Exekutiverar "verkställer" UPDATE-satsen
@@ -37,73 +34,55 @@ END;
 		}
 
 
+		//Om admin trycker på att ladda upp produkten sparas bilden i images/product som sedan hämtas och visas upp på sidan
+		if(isset($_POST['uploadButton'])){
 
-if(isset($_POST['uploadButton'])){
+			$imageName 	= $_FILES['productImage']['name'];
+			$imageType	= strtolower(end(explode('.', $imageName)));
+			$imageScr = 'images/product/productImage.' . $imageType;
+			move_uploaded_file($_FILES['productImage']['tmp_name'], $imageScr);
 
-	$imageName 	= $_FILES['productImage']['name'];
-	$imageType	= strtolower(end(explode('.', $imageName)));
-	$imageScr = 'images/product/productImage.' . $imageType;
-	move_uploaded_file($_FILES['productImage']['tmp_name'], $imageScr);
-
-		$query =<<<END
-		UPDATE Product
-		SET productImg = '$imageScr'
-		WHERE productId = '$productId'
+			//Sparar in sökvägen till bilden in i databasen
+				$query =<<<END
+				UPDATE Product
+				SET productImg = '$imageScr'
+				WHERE productId = '$productId'
 END;
 
-//Exekutiverar "verkställer" UPDATE-satsen
-	$res = $mysqli->query($query) or die("Failed");
-	
-	$image = $imageScr;
-	$feedback = "Sparat";
+		//Exekutiverar "verkställer" UPDATE-satsen
+			$res = $mysqli->query($query) or die("Failed");
+			
+			$image = $imageScr;
+			$feedback = "Sparat";
  }  
 
 ?>
-
+		<!-- Rubriken på prdoukt-sidan -->
 		<div class="h1Admin">Produkt</div>
-		Välj en bild för att representera produkten som skall designas. <br>
-	<ul>
-	<li>	Bilden skall vara i antingen gif (ej animerad) eller png-format. <br></li>
-	<li>	Bilden skall vara kvadratisk, rekommenderat 400*400 pixlar stor.
-	<li>	Bilden skall vara transparent innanför konturerna och ha en vit yta utanför konturerna.<br></li>
-	<li>	Bilden kan även innehålla skuggor för att göra produkten effektfull. <br><br></li>
-</ul>
 
-<form method="post" action="productAdmin.php" enctype="multipart/form-data">
-      <label>Välj bild </label>
-      <input type="file" name="productImage"/>
-      <input type="submit" name="uploadButton" value="Ladda upp och spara"/>
-     &nbsp;&nbsp; <?php echo $feedback;?>
-    </form><br><br>
- 
-<img style="height: 300px;" src=" <?php echo $image;?>"/>
-
-
+		<!-- Brödtext/hjälptext om hur produkten skall vara -->
+			Välj en bild för att representera produkten som skall designas. <br>
 		
-<?php } 
+		<ul>
+			<li>	Bilden skall vara i antingen gif (ej animerad) eller png-format. <br></li>
+			<li>	Bilden skall vara kvadratisk, rekommenderat 400*400 pixlar stor.
+			<li>	Bilden skall vara transparent innanför konturerna och ha en vit yta utanför konturerna.<br></li>
+			<li>	Bilden kan även innehålla skuggor för att göra produkten effektfull. <br><br></li>
+		</ul>
 
-if($session=="image"){
-	$arrow="arrow-right"; ?>
+		<!-- knappen och fältet "fälj fil"/"Ladda upp" -->
+		<form method="post" action="productAdmin.php" enctype="multipart/form-data">
+		      <label>Välj bild </label>
+		      <input type="file" name="productImage"/>
+		      <input type="submit" name="uploadButton" value="Ladda upp och spara"/>
+		     &nbsp;&nbsp; <?php echo $feedback;?>
+	    </form><br><br>
+ 
+ 		<!-- Bilden på produkten som laddats upp -->
+		<img style="height: 300px;" src=" <?php echo $image;?>"/>
 
-	<div class="h1Admin">Bild</div>
-		Tillåts uppladdning av bild för att designa produkten?
+	</div>
 
-
-		<form method="post" action="productAdmin.php?p=image" enctype="multipart/form-data">
-		<br><br><input type="image" src="images/godkannBtn.png" class="button" name="buttonYes"></input> <p>Ja</p>
-		<br><input type="image" src="images/tabortBtn.png" class="button" name="buttonNo"></input> <p>Nej</p>
-
-		</form>-->
-
-<?php } ?>
-
-
-</div>
-
-
-
-
-
-
+<!-- Avslutar hela sidan -->
 <?php include("includes/footerAdmin.php"); ?>
 
